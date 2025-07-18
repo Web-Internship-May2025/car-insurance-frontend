@@ -1,0 +1,13 @@
+@use "../index" as *;
+@use "./Mixin.scss" as mixin;
+
+.header-buttons {
+  width: fit-content;
+  @include mixin.flexbox(flex-start, center, row);
+  gap: 10px;
+}
+.view-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

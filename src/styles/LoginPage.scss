@@ -1,0 +1,39 @@
+@use '../index' as *;
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container {
+  padding: 3rem;
+  max-width: 500px;
+  min-width:650px;
+  min-height: 50vh; 
+  margin: 4rem auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: $dark-blue;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn-orange .btn-loader {
+  stroke: white;
+  animation: spin 1s linear infinite;
+  display: flex;
+}

@@ -1,0 +1,56 @@
+@use "../index" as *;
+
+.submenu.dropDown {
+  position: absolute;
+  top: 100%;
+  margin-left: -35px;
+  min-width: 150px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  color: $dark-blue;
+}
+
+.submenu.inline {
+  position: static;
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.submenu.dropDown a {
+  padding: 8px 16px;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.submenu.dropDown a:hover {
+  background-color: #f8f9fa;
+}
+
+.submenu.inline a {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.submenu.inline a:hover {
+  background-color: #ddd;
+}

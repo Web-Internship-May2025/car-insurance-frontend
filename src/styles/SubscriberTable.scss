@@ -1,0 +1,35 @@
+@use "../index" as *;
+@use "./Mixin.scss" as mixin;
+
+.subscribers-header {
+  @include mixin.flex-center(space-between, center);
+  margin-bottom: 12px;
+  
+ .subscribers-search-input {
+    padding: 8px;
+    width: 320px;
+  }
+
+ .add-subscriber-button {
+    max-width: fit-content;
+    max-height: fit-content;
+    cursor: pointer;
+    background-color: $dark-orange;
+    color: $white-color;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    &:hover {
+      background-color: $light-orange;
+    }
+  }
+
+  .custom-dialog {
+    width: 80vw; 
+    max-height: 80vh;  
+
+}
+}
+
+
+

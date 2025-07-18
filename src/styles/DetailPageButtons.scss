@@ -1,0 +1,42 @@
+@use '../index.scss' as *;
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  min-width: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-back {
+  background-color: $light-blue;
+  color: $white-color;
+  
+}
+
+.btn-update {
+  background-color: $light-orange;
+  color:$white-color;
+}
+
+.btn-restore {
+    background-color: $dark-orange;
+    color: $white-color;
+}
+
+.btn-delete {
+  background-color: $red-color;
+  color: $white-color;
+}

@@ -1,0 +1,142 @@
+@use "../index.scss" as *;
+@use "./FormContainer.scss" as *;
+@use "./Mixin.scss" as m;
+
+.view-container {
+  @include m.flexbox(center, center, row);
+  gap: 20px;
+  
+  width: 100%;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+}
+
+.image-detail {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+// src/styles/PolicyDetail.scss
+
+.form-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: inherit;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  color: inherit;
+}
+
+.view-container {
+  display: flex;
+  justify-content: center;
+}
+
+.view-container-child {
+  width: 100%;
+}
+
+.view-container-child p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.view-container-child strong {
+  color: inherit;
+}
+
+.car-info {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 2px solid #ecf0f1;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.02);
+}
+
+.car-info h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #bdd7f7;
+  padding-bottom: 8px;
+  letter-spacing: 0.8px;
+  color: inherit;
+}
+
+.car-info p {
+  margin: 8px 0;
+  font-size: 1.05rem;
+  color: inherit;
+}
+
+.car-info img {
+  display: block;
+  margin: 15px 0 0 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.car-info img:hover {
+  transform: scale(1.05);
+}
+
+.error {
+  color: inherit;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+p strong + span {
+  margin-left: 10px;
+}
+
+span {
+  font-weight: 600;
+}
+
+p svg {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .view-container-child p {
+    font-size: 1rem;
+  }
+  .car-info h3 {
+    font-size: 1.3rem;
+  }
+}
+

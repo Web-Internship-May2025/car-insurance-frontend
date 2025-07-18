@@ -1,0 +1,18 @@
+@use '../index' as *;
+
+.button {
+    border-radius: 25%;
+    background-color: $light-orange;
+    color: white;
+    border-color: $light-orange;
+    font-weight: 500;
+    border-bottom: 0cm;
+    border: 0cm;
+    padding: 10%;
+
+}
+
+.button:hover {
+    background-color: $dark-orange;
+
+}

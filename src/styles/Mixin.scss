@@ -1,0 +1,44 @@
+@use "../index.scss" as *;
+@use "sass:color";
+
+@mixin flexbox($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  justify-self: $justify;
+  align-self: $align;
+  flex-direction: $direction;
+}
+// TODO SPOJITI OVA DVA MIXINA
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button-style(
+  $bg-color,
+  $hover-darken: 10%,
+  $text-color: #fff,
+  $padding: 8px 16px,
+  $border-radius: 5px
+) {
+  background-color: $bg-color;
+
+  @if $hover-darken != null {
+    &:hover {
+      background-color: color.adjust($bg-color, $lightness: -$hover-darken);
+    }
+  }
+  color: $text-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  display: inline-block;
+  text-align: center;
+}

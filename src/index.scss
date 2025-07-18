@@ -1,0 +1,140 @@
+$light-orange: #f89344;
+$dark-orange: #ff642f;
+$sky-blue: #a8c6ea;
+$light-blue: #4c8fe2;
+$dark-blue: #386dac;
+$white-color: #fff;
+$red-color: red;
+$th-background: #f0f0f0;
+$table-border: #ddd;
+$table-child: #fafafa;
+$table-hover: #f5f5f5;
+$gray-color: gray;
+$light-gray:  #afaaaa;
+
+$padding-button: 8px 16px;
+$radius-button: 5px;
+
+#root {
+  width: 100%;
+  max-width: 100vw; /* make sure it doesn't exceed viewport */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-family: Montserrat;
+  background-color: $sky-blue !important;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: black;
+}
+
+h2 {
+  font-size: 1.7em;
+  line-height: 1.1;
+  color: black;
+}
+p {
+  font-size: 1.3em;
+  text-align: lefts;
+  color: black;
+}
+
+.montserrat Montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  max-width: 100%;
+  width: 100% !important;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  /* remove native arrow in most browsers: */
+  appearance: none;
+  background-image: url("/src/assets/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 10px 6px;
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+
+  & > option:first-child {
+    color: #999;
+  }
+}
+
+option {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+label {
+  font-family: Montserrat, sans-serif;
+  font-size: medium;
+  margin-bottom: 0.5rem;
+  color: $dark-blue;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100% !important;
+  font-family: Montserrat, sans-serif;
+  font-size: medium;
+}
+
+.error-message {
+  background-color: #fdd;
+  color: #c00;
+  padding: 0.75rem 1rem;
+  border: 1px solid #c00;
+  border-radius: 4px;
+  margin-top: 1rem;
+  font-family: Montserrat, sans-serif;
+}
+.success-message {
+  color: green;
+  background-color: #d4edda;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.title {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: $dark-blue;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}

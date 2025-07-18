@@ -1,0 +1,42 @@
+@use "../index.scss" as *;
+
+.breadcrumb-wrapper {
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.underline-last .breadcrumb {
+  & span:last-child {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: $dark-blue;
+
+  a {
+    color: $dark-blue;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: $light-blue;
+      text-decoration: underline;
+    }
+  }
+  span.separator {
+    margin: 0 8px;
+    color: $dark-blue;
+    font-size: 1.2em;
+  }
+  .breadcrumb-current {
+    font-weight: bold;
+    color: $dark-blue;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

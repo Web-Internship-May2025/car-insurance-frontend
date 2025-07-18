@@ -1,0 +1,8 @@
+.cards-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 16px;
+}

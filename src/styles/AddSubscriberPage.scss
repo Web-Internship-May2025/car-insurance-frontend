@@ -1,0 +1,65 @@
+@use "../index" as *;
+@use "./Mixin.scss" as mixin;
+
+
+
+.custom-dialog {
+  .MuiDialog-paper {
+    max-height: 80vh;   
+    overflow: hidden;   
+    max-width: 90vh;  
+  }
+
+  .MuiDialogContent-root {
+    max-height: calc(80vh - 40px);  
+    overflow-y: auto;              
+  }
+}
+
+.add-subscriber-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px; 
+  margin: 0 auto;
+  width: 100%; 
+}
+
+.add-subscriber-form .form-group {
+  width: 100%; 
+  margin-bottom: 1rem;
+}
+
+.dialog-title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: $dark-blue; 
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.back-button {
+  background-color: $dark-blue;
+}
+.cancel-button {
+  background-color: $gray-color;
+}
+
+.add-button {
+  background-color: $dark-orange;
+}
+
+.form-actions {
+  @include mixin.flex-center(flex-center, center);
+  gap: 280px;
+  margin-top: 20px;
+}

@@ -1,0 +1,108 @@
+@use "../index" as *;
+@import 'Mixin.scss';
+
+.page-wrapper {
+  @include flex-center($justify: center, $align: center);
+  padding-top: 0;          
+  margin-top: 30px;
+  min-height: calc(100vh - 72px);
+}
+
+
+.brand-form {
+  background-color: $white-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin-top: -220px ;
+}
+
+.form-header {
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: $dark-blue;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid $table-border;
+  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.95rem;
+}
+
+.error-message {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: $red-color;
+}
+
+.preview-box {
+  height: 200px;
+  border: 2px dashed $table-border;
+  border-radius: 4px;
+  background-color: $th-background;
+  color: $gray-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.btn-back,
+.btn-cancel,
+.btn-add {
+  padding: 0.75rem 1.5rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $white-color;
+}
+.btn-back   { background-color: $dark-blue; }
+.btn-cancel { background-color: $gray-color; }
+.btn-add    { background-color: $dark-orange; }
+
+
+.response-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  &.error   { color: red; }
+  &.success { color: green; }
+}

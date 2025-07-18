@@ -1,0 +1,26 @@
+@use '../index.scss' as *;
+
+.policy-search-bar{
+  padding-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .car-filters {
+    //height: 100%;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+  }
+
+  .advanced-search{
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

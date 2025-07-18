@@ -1,0 +1,124 @@
+@use "../index" as *;
+
+.generic-card {
+  background-color: $white-color;
+  border: 1px solid $table-border;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: $dark-blue;
+  }
+
+  p {
+    margin: 4px 0;
+    font-size: 0.9em;
+    color: $gray-color;
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  .action-buttons {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9em;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.2s;
+
+      svg {
+        margin-right: 6px;
+      }
+
+      &:hover {
+        background-color: $light-orange;
+      }
+    }
+  }
+
+  .icon-tooltip {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      background-color: #333;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 0.75em;
+      opacity: 0;
+      pointer-events: none;
+      transition:
+        opacity 0.3s,
+        transform 0.3s;
+      z-index: 1000;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      &:focus {
+        outline: 2px solid $dark-blue;
+        outline-offset: 2px;
+      }
+    }
+  }
+  .pagination-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .page-buttons {
+    display: flex;
+    gap: 4px;
+  }
+}

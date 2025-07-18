@@ -1,0 +1,70 @@
+@use "../index.scss" as *;
+@use "./FormContainer.scss" as *;
+@use "./Mixin.scss" as m;
+
+.view-container {
+  @include m.flexbox(center, center, row);
+  gap: 20px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.user-icon {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+/* Tooltip container */
+.tooltip-container {
+  position: relative;
+  display: inline-block; /* or inline-flex if needed */
+}
+
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden; /* Hidden by default */
+  width: max-content;
+  max-width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  font-size: 0.9em;
+}
+
+/* Arrow below tooltip */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* At the bottom of tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+

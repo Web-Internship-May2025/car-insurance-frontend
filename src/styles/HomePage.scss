@@ -1,0 +1,29 @@
+@use '../index' as *;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-container {
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: $white-color;
+  border-radius: 1rem;
+}
+
+.heading{
+    color: $dark-blue;
+    font-size: x-large;
+}
+
+.home-photo {
+  width: 60%; 
+  height: 80%; 
+  border-radius: 20px; 
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

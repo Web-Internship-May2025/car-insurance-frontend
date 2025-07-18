@@ -1,0 +1,76 @@
+@use "../index" as *;
+
+.d-custom-none {
+  display: block !important;
+}
+
+@media (min-width: 776px) {
+  .d-custom-none {
+    display: none !important;
+  }
+}
+
+/* Show element for widths >= 776px */
+.d-custom-flex {
+  display: none !important;
+}
+
+@media (min-width: 776px) {
+  .d-custom-flex {
+    display: flex !important;
+  }
+}
+
+.navbar {
+  background-color: $dark-blue;
+  font-family: Montserrat;
+  color: white;
+  font-size: medium;
+}
+.nav-link:hover {
+  color: $sky-blue;
+  cursor: pointer;
+}
+
+.offcanvas-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+}
+
+.offcanvas-menu.open {
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1040;
+}
+
+.custom-link {
+  font-size: medium;
+  color: #333;
+  text-decoration: none;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    font-size 0.3s;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.car-icon:hover {
+  color: $dark-blue;
+}

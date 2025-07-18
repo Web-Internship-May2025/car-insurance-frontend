@@ -1,0 +1,14 @@
+@use "../index.scss" as *;
+@use "./Mixin.scss" as m;
+
+.form-container {
+  @include m.flexbox(center, center, column);
+  width: 50%;
+  background-color: $white-color;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}

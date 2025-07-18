@@ -1,0 +1,27 @@
+@use "../index.scss" as *;
+@use "./FormContainer.scss" as *;
+@use "./Mixin.scss" as m;
+
+.view-container {
+  @include m.flexbox(center, center, row);
+  gap: 20px;
+  
+  width: 100%;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+}
+
+
+.image-detail {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+

@@ -1,0 +1,50 @@
+@use "../index" as *;
+@use "./Mixin.scss" as mixin;
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 72px);
+  width: calc(100vw - 40px);
+  box-sizing: border-box;
+  margin: 72px auto 0 auto;
+  padding: 20px 40px;
+  @media (max-width: 752px) {
+    height: calc(100vh - 61px);
+    margin: 61px auto 0 auto;
+    padding: 20px 10px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: $white-color;
+  max-width: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: 400;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  @include mixin.flexbox(space-between, space-between, row);
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+.add-new-button {
+  max-width: fit-content;
+  max-height: fit-content;
+  background-color: $dark-orange;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.add-new-button:hover {
+  background-color: $light-orange;
+}
